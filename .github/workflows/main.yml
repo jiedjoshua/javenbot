@@ -1,0 +1,25 @@
+name: Daily Deployment
+
+on:
+  schedule:
+   - cron: "0 4 * * *"  # Runs from 11:58 AM to 12:01 PM PH time (3:58 AM to 4:01 AM UTC)
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Execute program
+        run: python javenbot.py
