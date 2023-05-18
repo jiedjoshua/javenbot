@@ -2,7 +2,7 @@ name: Daily Deployment
 
 on:
   schedule:
-   - cron: "49 15 * * *"  
+    - cron: "3 0 * * *"
 
 jobs:
   deploy:
@@ -19,7 +19,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install -r .github/workflows/requirements.txt
 
       - name: Execute program
         run: python javenbot.py
