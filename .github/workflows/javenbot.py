@@ -12,10 +12,10 @@ user_id = '1635615023'
 # Function to send the reminder message
 async def send_lunch_reminder():
     bot = Bot(token=bot_token)
-    await bot.send_message(chat_id=user_id, text='It\'s lunchtime! Don\'t forget to eat pretty! 🍽️')
+    await bot.send_message(chat_id=user_id, text='It\'s lunchtime! Don\'t forget to eat pretty! 🍽️') # type: ignore
 
 # Schedule the reminder to run at 12 PM every day
-schedule.every().day.at('00:18').do(asyncio.run, send_lunch_reminder())
+schedule.every().day.at('00:50').do(asyncio.run, send_lunch_reminder())
 
 # Start the scheduler
 while True:
