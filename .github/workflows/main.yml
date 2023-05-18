@@ -2,7 +2,7 @@ name: Daily Deployment
 
 on:
   schedule:
-   - cron: "25 15 * * *"  # Runs from 11:58 AM to 12:01 PM PH time (3:58 AM to 4:01 AM UTC)
+   - cron: "28 15 * * *"  # Runs from 11:58 AM to 12:01 PM PH time (3:58 AM to 4:01 AM UTC)
 
 jobs:
   deploy:
