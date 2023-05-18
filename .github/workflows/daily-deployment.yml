@@ -19,7 +19,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install -r .github/workflows/requirements.txt
 
       - name: Execute program
         run: python javenbot.py
