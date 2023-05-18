@@ -1,3 +1,0 @@
-schedule
-python-telegram-bot
-asyncio
