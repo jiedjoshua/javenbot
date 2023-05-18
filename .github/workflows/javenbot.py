@@ -7,7 +7,7 @@ import asyncio
 bot_token = '6196088902:AAHxIuetBvYCnweKh5ZfR41WrmQxxiU3NyI'
 
 # User ID to send the reminder
-user_id = '971915251'
+user_id = '1635615023'
 
 # Function to send the reminder message
 async def send_lunch_reminder():
