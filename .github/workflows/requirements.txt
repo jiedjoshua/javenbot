@@ -1,4 +1,2 @@
 schedule
-time
 python-telegram-bot
-asyncio
