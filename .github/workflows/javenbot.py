@@ -17,7 +17,16 @@ async def send_lunch_reminder():
 # Schedule the reminder to run at 12 PM every day
 schedule.every().day.at('23:10').do(asyncio.run, send_lunch_reminder())
 
-# Start the scheduler
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# Infinite loop to continuously check for scheduled tasks
+async def run_schedule():
+    while True:
+        schedule.run_pending()
+        await asyncio.sleep(1)
+
+# Run the schedule in an asyncio event loop
+async def main():
+    await asyncio.gather(run_schedule())
+
+# Start the asyncio event loop
+if __name__ == '__main__':
+    asyncio.run(main())
