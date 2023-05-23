@@ -26,7 +26,7 @@ jobs:
 
       - name: Run lunch reminder script
         run: |
-          python javenbot.py
+          python .github/workflows/javenbot.py
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           USER_ID: ${{ secrets.USER_ID }}
